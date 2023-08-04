@@ -1,0 +1,25 @@
+[include]
+	path = ~/.gitconfig.secret
+
+[core]
+	pager = delta
+	excludesfile = ~/.gitignore
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	features = decorations
+	keep-plus-minus-markers = true
+	line-numbers = true
+	navigate = true
+	light = false
+
+[diff]
+	colorMoved = default
+	renames = copies
+	algorithm = patience
+	compactionHeuristic = true
+
+[merge]
+	conflictstyle = diff3

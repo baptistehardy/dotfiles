@@ -1,0 +1,22 @@
+# Global gitignore
+
+# IDE stuff
+.idea/
+.vscode/
+*.iml
+.ipynb_checkpoints/
+
+# Python
+.venv*
+__pycache__
+
+# Node
+node_modules/
+npm-debug.log
+
+# PHP/Composer
+var/
+vendor/
+
+# MacOS
+.DS_Store
