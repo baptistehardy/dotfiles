@@ -1,5 +1,6 @@
 eval "$(starship init zsh)"
 
 alias cat="batcat"
+alias ls="erd"
 
-export GPG_TTYY=$TTY
+export GPG_TTY=$TTY
