@@ -112,14 +112,28 @@ in {
     wget
     curl
     git
-    sysstat
-    lm_sensors # for `sensors` command
-    # minimal screen capture tool, used by i3 blur lock to take a screenshot
-    # print screen key is also bound to this tool in i3 config
-    scrot
     neofetch
-    xfce.thunar # xfce4's file manager
-    nnn # terminal file manager
+    bat
+    bottom
+    dasel
+    dust
+    eza
+    fd
+    fx
+    fzf
+    httpie
+    jql
+    just
+    nodejs
+    oh-my-posh
+    ripgrep
+    stow
+    thefuck
+    tmux
+    unzip
+    curl
+    git
+    htop
   ];
 
   # Enable sound with pipewire.
@@ -129,6 +143,11 @@ in {
     enable = true;
   };
   security.polkit.enable = true;
+  
+  programs.gnupg.agent = {                                                      
+    enable = true;
+    enableSSHSupport = true;
+  };  
 
   services = {
     pipewire = {
