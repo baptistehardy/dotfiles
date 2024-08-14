@@ -9,6 +9,7 @@
 
     autosuggestion.enable = true;
     enableCompletion = true;
+    syntaxHighlighting.enable = true;
 
     shellAliases = {
       ls = "exa -la";
@@ -18,18 +19,9 @@
       eval $(thefuck --alias)
     '';
 
-    plugins = with pkgs; [
-      {
-        name = "zsh-syntax-highlighting";
-        src = fetchFromGitHub {
-          owner = "zsh-users";
-          repo = "zsh-syntax-highlighting";
-          rev = "0.6.0";
-          sha256 = "0zmq66dzasmr5pwribyh4kbkk23jxbpdw4rjxx0i7dx8jjp2lzl4";
-        };
-        file = "zsh-syntax-highlighting.zsh";
-      }
-    ];
+    envExtra = ''
+        export PATH=/run/current-system/sw/bin/:/nix/var/nix/profiles/default/bin:$HOME/.nix-profile/bin:/etc/profiles/per-user/$USER/bin:$PATH
+    '';
   };
   
   programs.fzf = {
