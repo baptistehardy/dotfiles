@@ -1,6 +1,6 @@
 		{
   imports = [
-    ./git.nix
+    ./git/git.nix
     ./gpg.nix
     ./zsh.nix
   ];
