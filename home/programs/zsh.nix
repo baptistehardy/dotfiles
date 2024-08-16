@@ -14,6 +14,8 @@
     shellAliases = {
       ls = "eza -la";
       mux = "zellij";
+      cat = "bat";
+      update = "sudo nixos-rebuild switch --flake";
     };
 
     initExtra = ''
@@ -35,5 +37,7 @@
     options = [ "--cmd cd" ];
   };
 
-  programs.thefuck.enable = true; 
+  programs.thefuck.enable = true;
+
+  programs.bat.enable = true; 
 }

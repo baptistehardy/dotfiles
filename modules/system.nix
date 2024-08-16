@@ -95,9 +95,7 @@ in {
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     curl
-    git
     fastfetch
-    bat
     bottom
     dasel
     dust
@@ -111,7 +109,6 @@ in {
     stow
     unzip
     curl
-    git
   ];
 
   # Enable sound with pipewire.
