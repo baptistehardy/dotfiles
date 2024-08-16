@@ -34,4 +34,9 @@
     enable = true;
     enableZshIntegration = true;
   };
+
+  programs.zoxide = {
+    enable = true;
+    options = [ "--cmd cd" ];
+  };
 }
