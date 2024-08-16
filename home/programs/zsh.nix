@@ -13,9 +13,15 @@
 
     shellAliases = {
       ls = "eza -la";
+      ".1" = "cd ..";
+      ".2" = "cd ../..";
+      ".3" = "cd ../../..";
+      ".4" = "cd ../../../..";
+      ".5" = "cd ../../../../.."; 
     };
 
     initExtra = ''
+      eval "$(${pkgs.oh-my-posh}/bin/oh-my-posh init zsh --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/catppuccin_mocha.omp.json)"
       eval $(thefuck --alias)
     '';
 
