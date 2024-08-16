@@ -101,7 +101,6 @@ in {
     bottom
     dasel
     dust
-    eza
     fd
     fx
     fzf

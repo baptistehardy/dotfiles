@@ -12,7 +12,7 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
-      ls = "exa -la";
+      ls = "eza -la";
     };
 
     initExtra = ''
