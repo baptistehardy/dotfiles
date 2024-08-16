@@ -22,7 +22,6 @@
 
     initExtra = ''
       eval "$(${pkgs.oh-my-posh}/bin/oh-my-posh init zsh --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/catppuccin_mocha.omp.json)"
-      eval $(thefuck --alias)
     '';
 
     envExtra = ''
@@ -39,4 +38,6 @@
     enable = true;
     options = [ "--cmd cd" ];
   };
+
+  programs.thefuck.enable = true; 
 }

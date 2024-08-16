@@ -96,23 +96,19 @@ in {
     wget
     curl
     git
-    neofetch
+    fastfetch
     bat
     bottom
     dasel
     dust
     fd
     fx
-    fzf
     httpie
     jql
     just
     nodejs
-    oh-my-posh
     ripgrep
     stow
-    thefuck
-    tmux
     unzip
     curl
     git
