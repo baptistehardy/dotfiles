@@ -8,40 +8,34 @@
     userName = "Baptiste Hardy";
     userEmail = "baptiste@hardy.sh";
 
-   signing = {
-      signByDefault = true;
-      key = "E5007CA28AE272E8";
+    signing = {
+       signByDefault = true;
+       key = "E5007CA28AE272E8";
+     };
+
+    ignores = [ (builtins.readFile ./gitignore) ];
+   
+    delta = {
+      enable = true;
+      options = {
+        diff-so-fancy = true;
+        line-numbers = true;
+        true-color = "always";
+      };
     };
 
-   ignores = [ (builtins.readFile ./gitignore) ];
+    aliases = {
+      br = "branch";
+      co = "checkout";
+      cm = "commit -m"
+    };
 
-   extraConfig = {
-     core = {
-       pager = "delta";
-     };
-
-     interactive = {
-       diffFilter = "delta --color-only";
-     };
-
-     delta = {
-       features = "decorations";
-       keep-plus-minus-markers = true;
-       line-numbers = true;
-       navigate = true;
-       light = false;
-     };
-
-     diff = {
-       colorMoved = "default";
-       renames = "copies";
-       algorithm = "patience";
-       compactionHeuristic = true;
-     };
-
-     merge = {
-       conflictstyle = "diff3";
-     };
+    extraConfig = {
+      init.defaultBranch = "main";
+      push.autoSetupRemove = true;
+      url = {
+        "ssh://git@github.com/baptistehardy" = { insteadOf = "https://github.com/baptistehardy"; };
+      };
     };
   };
 }
