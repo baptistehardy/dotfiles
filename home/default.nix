@@ -2,8 +2,12 @@
 
 {
   imports = [
-    ./programs
     ./dev-tools.nix
+    ./zsh.nix
+    ./gpg.nix
+    ./git/git.nix
+    ./zellij.nix
+    ./eza.nix
   ];
 
   # Home Manager needs a bit of information about you and the

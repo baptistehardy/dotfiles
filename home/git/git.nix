@@ -27,7 +27,7 @@
     aliases = {
       br = "branch";
       co = "checkout";
-      cm = "commit -m"
+      cm = "commit -m";
     };
 
     extraConfig = {
