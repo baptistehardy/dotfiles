@@ -1,5 +1,13 @@
-{ pkgs, ... }:
+{ inputs, config, pkgs, ... }: {
 
-{
-  home.packages = with pkgs; [ pkgs.nvchad ];
+  imports = [
+    inputs.nvchad4nix.homeManagerModule
+  ];
+
+  programs.nvchad = {
+    enable = true;
+    extraPackages = with pkgs; [
+      nixd
+    ];
+  };
 }

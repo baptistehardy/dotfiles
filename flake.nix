@@ -29,22 +29,17 @@
         modules = [
           ./hosts/tachyon
 
-          {
-            nixpkgs = {
-              overlays = [
-                inputs.nvchad4nix.overlays.default
-              ];
-            };
-          }
-
           home-manager.nixosModules.home-manager {
             home-manager = {
+              extraSpecialArgs = { inherit inputs; };
               useGlobalPkgs = true;
               useUserPackages = true;
               users.baptiste = import ./home;
             };
           }
         ];
+
+        specialArgs = { inherit inputs; };
       };
     };
   };
