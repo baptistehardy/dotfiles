@@ -8,7 +8,6 @@
 ## Folder anatomy
 
 - `home`: `home-manager` configs
-- `git/`: `git` config found in `~/``
 - `kbd/`: personal QMK binaries for my keyboards
 - `hosts`: Desktop/VMs/servers configs
 - `modules`: System config defaults
