@@ -8,6 +8,7 @@
     ./git/git.nix
     ./zellij.nix
     ./eza.nix
+    ./utilities.nix
   ];
 
   # Home Manager needs a bit of information about you and the

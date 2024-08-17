@@ -93,17 +93,6 @@ in {
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim
-    wget
-    curl
-    fastfetch
-    bottom
-    dust
-    fd
-    just
-    ripgrep
-    stow
-    unzip
-    curl
   ];
 
   # Enable sound with pipewire.
