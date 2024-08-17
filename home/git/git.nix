@@ -1,7 +1,6 @@
+{ pkgs, ... }: 
+
 {
-  pkgs,
-  ...
-}: {
   programs.git = {
     enable = true;
 
@@ -37,5 +36,16 @@
         "ssh://git@github.com/baptistehardy" = { insteadOf = "https://github.com/baptistehardy"; };
       };
     };
+  };
+
+  programs.gh = {
+    enable = true;
+    settings = {
+      git_protocol = "ssh";
+    };
+  };
+
+  programs.lazygit = {
+    enable = true;
   };
 }

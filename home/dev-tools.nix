@@ -2,9 +2,6 @@
 
 {
   home.packages = with pkgs; [
-    # Visual git client
-    lazygit
-
     # API testing client
     httpie
 
