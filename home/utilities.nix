@@ -46,5 +46,11 @@
     # HTTP clients
     curl
     wget
+
+    # GPG TUI 
+    gpg-tui
+
+    # TUI for CVEs
+    # flawz
   ];
 }
