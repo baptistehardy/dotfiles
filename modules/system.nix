@@ -1,5 +1,4 @@
 { pkgs, lib, ... }: {
-
   imports = [
     ./i18n.nix
     ./location.nix
