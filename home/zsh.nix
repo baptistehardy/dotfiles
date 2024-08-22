@@ -15,7 +15,6 @@
       ls = "eza -la";
       mux = "zellij";
       cat = "bat";
-      update = "sudo nixos-rebuild switch --flake";
     };
 
     initExtra = ''
