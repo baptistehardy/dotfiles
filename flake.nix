@@ -24,7 +24,6 @@
     self,
     nixpkgs,
     home-manager,
-    rust-overlay,
     ...
   }:
   {
@@ -35,10 +34,7 @@
         modules = [
           ./hosts/tachyon
           
-          ({ pkgs, ... }: {
-            nixpkgs.overlays = [ rust-overlay.overlays.default ];
-            environment.systemPackages = [ pkgs.rust-bin.stable.latest.default ];
-          })          
+          ./overlays
 
           home-manager.nixosModules.home-manager {
             home-manager = {
