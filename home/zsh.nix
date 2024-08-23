@@ -37,6 +37,4 @@
   };
 
   programs.thefuck.enable = true;
-
-  programs.bat.enable = true; 
 }
