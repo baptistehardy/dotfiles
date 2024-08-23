@@ -10,6 +10,7 @@
     ./utilities.nix
     ./neovim.nix
     ./bat.nix
+    ./dev
 
     inputs.nvchad4nix.homeManagerModule
   ];
