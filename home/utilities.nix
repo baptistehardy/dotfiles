@@ -20,6 +20,9 @@
     # ping with TUI
     gping
 
+    # Bandwidth utilization tool
+    bandwhich
+
     # Makefile alternative
     just
 
@@ -35,11 +38,13 @@
     # File sharing CLI
     croc
 
-    # Better top
+    # Alternative to top
     bottom
 
     fastfetch
 
+    # Zipping utilities
+    zip
     unzip
     ripunzip
 
