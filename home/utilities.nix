@@ -52,6 +52,10 @@
     curl
     wget
 
+    openssl
+
+    ffmpeg_7
+
     # GPG TUI 
     gpg-tui
 
