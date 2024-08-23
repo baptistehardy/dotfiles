@@ -1,33 +1,13 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [
-      ../../modules/system.nix
+  imports = [
+    ../../modules
 
-      # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+    ./hardware-configuration.nix
+  ];
 
-  # Bootloader.
-  boot.loader = {
-    grub = {
-      enable = true;
-      device = "/dev/sda";
-      useOSProber = true;
-    };
-    #systemd-boot.enable = true;
-  };
-
-  networking.hostName = "tachyon"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Enable networking
-  networking.networkmanager.enable = true;
+  networking.hostName = "tachyon";
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
