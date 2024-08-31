@@ -2,7 +2,14 @@
   description = "Baptiste's NixOS configuration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs = {
+      url = "github:nixos/nixpkgs/nixos-24.05";
+    };
+
+    nixpkgs-unstable = {
+      url = "github:nixos/nixpkgs/nixpkgs-unstable";
+      follows = "nixpkgs";
+    };
 
     home-manager = { 
       url = "github:nix-community/home-manager/release-24.05";
@@ -23,6 +30,7 @@
   outputs = inputs @ {
     self,
     nixpkgs,
+    nixpkgs-unstable,
     home-manager,
     ...
   }:
