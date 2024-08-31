@@ -14,6 +14,11 @@
       url = "github:nix-community/home-manager/release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    darwin = {
+      url = "github:lnl7/nix-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     
     nvchad4nix = {
       url = "github:NvChad/nix";
@@ -31,6 +36,7 @@
     nixpkgs,
     nixpkgs-unstable,
     home-manager,
+    darwin,
     ...
   }:
   {
@@ -46,6 +52,23 @@
           ./overlays
 
           home-manager.nixosModules.home-manager {
+            home-manager = {
+              extraSpecialArgs = { inherit inputs nixpkgs nixpkgs-unstable; };
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.baptiste = import ./home;
+            };
+          }
+        ];
+      };
+    };
+
+    darwinConfigurations = {
+      macos = darwin.lib.darwinSystem {
+        system = "aarch64-darwin";
+
+        modules = [
+          home-manager.darwinModules.home-manager {
             home-manager = {
               extraSpecialArgs = { inherit inputs nixpkgs nixpkgs-unstable; };
               useGlobalPkgs = true;
