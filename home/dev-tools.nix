@@ -25,5 +25,7 @@
 
     # load testing tool
     k6
+
+    pastel
   ];
 }
