@@ -8,7 +8,6 @@
 
     nixpkgs-unstable = {
       url = "github:nixos/nixpkgs/nixpkgs-unstable";
-      follows = "nixpkgs";
     };
 
     home-manager = { 
@@ -38,23 +37,23 @@
     nixosConfigurations = {
       tachyon = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        
+        specialArgs = { inherit inputs nixpkgs nixpkgs-unstable; };
 
         modules = [
           ./hosts/tachyon
-          
+            
           ./overlays
 
           home-manager.nixosModules.home-manager {
             home-manager = {
-              extraSpecialArgs = { inherit inputs nixpkgs; };
+              extraSpecialArgs = { inherit inputs nixpkgs nixpkgs-unstable; };
               useGlobalPkgs = true;
               useUserPackages = true;
               users.baptiste = import ./home;
             };
           }
-        ];        
-
-        specialArgs = { inherit inputs; };
+        ];
       };
     };
   };
