@@ -3,5 +3,6 @@ _: {
     ./lua.nix
     ./python.nix
     ./javascript.nix
+    ./go.nix
   ];
 }
